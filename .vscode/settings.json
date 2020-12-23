@@ -1,5 +1,4 @@
 {
-  "python.pythonPath": "/home/kwonbeloper/.local/share/virtualenvs/airbnb-clone-ZEX4ikYx/bin/python",
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
   "python.linting.enabled": true,
