@@ -45,7 +45,7 @@ class Command(BaseCommand):
                 room_models.Photo.objects.create(
                     caption=seeder.faker.sentence(),
                     room=room,
-                    file=f"room_photos/{random.randint(1,31)}.png",
+                    file=f"room_photos/{random.randint(1,31)}.jpeg",
                 )
             for a in amenities:
                 magic_number = random.randint(0, 15)

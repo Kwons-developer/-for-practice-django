@@ -8,6 +8,5 @@
     " editor.formatOnSave ": true,
     " editor.formatOnSaveTimeout ": 3000
   },
-  "editor.formatOnSave": true,
-  "python.formatting.blackPath": "/home/kwonbeloper/.local/share/virtualenvs/airbnb-clone-ZEX4ikYx/bin/black"
+  "editor.formatOnSave": true
 }
