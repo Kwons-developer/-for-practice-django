@@ -8,5 +8,6 @@
     " editor.formatOnSave ": true,
     " editor.formatOnSaveTimeout ": 3000
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "python.pythonPath": "/Users/kwon/.local/share/virtualenvs/-for-practice-django-1F6EpOjd/bin/python"
 }
