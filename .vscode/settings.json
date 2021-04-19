@@ -9,5 +9,5 @@
     " editor.formatOnSaveTimeout ": 3000
   },
   "editor.formatOnSave": true,
-  "python.pythonPath": "/Users/kwon/.local/share/virtualenvs/-for-practice-django-1F6EpOjd/bin/python"
+  "python.pythonPath": "/opt/homebrew/opt/python@3.9/bin/python3.9"
 }
