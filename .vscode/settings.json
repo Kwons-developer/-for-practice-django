@@ -8,6 +8,5 @@
     " editor.formatOnSave ": true,
     " editor.formatOnSaveTimeout ": 3000
   },
-  "editor.formatOnSave": true,
-  "python.pythonPath": "/opt/homebrew/opt/python@3.9/bin/python3.9"
+  "editor.formatOnSave": true
 }
