@@ -1,5 +1,4 @@
 from django import forms
-from django.forms.formsets import DEFAULT_MAX_NUM
 from . import models
 
 
@@ -22,20 +21,13 @@ class LoginForm(forms.Form):
             self.add_error("email", forms.ValidationError("User does not exist"))
 
 
-class SignUpForm(forms.Form):
-    first_name = forms.CharField(max_length=80)
-    last_name = forms.CharField(max_length=80)
-    email = forms.EmailField()
+class SignUpForm(forms.ModelForm):
+    class Meta:
+        model = models.User
+        fields = ("first_name", "last_name", "email")
+
     password = forms.CharField(widget=forms.PasswordInput)
     password1 = forms.CharField(widget=forms.PasswordInput, label="Confirm Password")
-
-    def clean_email(self):
-        email = self.cleaned_data.get("email")
-        try:
-            models.User.objects.get("email")
-            raise forms.ValidationError("User already exists with that email")
-        except models.User.DoesNotExist:
-            return email
 
     def clean_password1(self):
         password = self.cleaned_data.get("password")
@@ -45,3 +37,11 @@ class SignUpForm(forms.Form):
             raise forms.ValidationError("Password confirmation does not match")
         else:
             return password
+
+    def save(self, *args, **kwargs):
+        user = super().save(commit=False)
+        email = self.cleaned_data("email")
+        password = self.cleaned_data("password")
+        user.username = email
+        user.set_password(password)
+        user.save()  # commit=True
