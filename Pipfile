@@ -11,6 +11,7 @@ django-seed = "*"
 package-name = "*"
 pillow = "*"
 django-dotenv = "*"
+requests = "*"
 
 [dev-packages]
 flake8 = "*"
